@@ -31,3 +31,4 @@ Face 17: Top=90, Right=533, Bottom=126, Left=497
 
 Result Image
 
+<img width="573" height="273" alt="image" src="https://github.com/user-attachments/assets/432329bf-2a70-4c22-9d08-0c0e4597368a" />
