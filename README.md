@@ -3,7 +3,7 @@ CSC580 Module 1 Critical Thinking assignment
 
 [Github Repo Link](https://github.com/Jason-csugc/CSC580-module1CT)
 
-Execute application with python3 main.py '<<<<filename>>>>'
+Execute application with python3 main.py 'filename.jpg'
 
 Example expected output
 
