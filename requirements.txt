@@ -6,4 +6,4 @@ face_recognition_models==0.3.0
 numpy==2.4.3
 opencv-python==4.13.0.92
 pillow==12.1.1
-setuptools==70.3.0
+setuptools==70.3.0 # this version was a major issue for my runtime environment, so I added a comment to make sure it was tracked
