@@ -7,15 +7,10 @@ import os
 
 def main():
     parser = argparse.ArgumentParser(description='Detect and draw faces in an image')
-    parser.add_argument('image_path', nargs='?', default='crowd.jpg',
-                        help='Path to the input image file (default: crowd.jpg)')
+    parser.add_argument('image_path', nargs='?', default='faces.jpg',
+                        help='Path to the input image file (default: faces.jpg)')
     parser.add_argument('--output', '-o', default='image_with_boxes.jpg',
                         help='Path to save the output image with boxes (default: image_with_boxes.jpg)')
-    parser.add_argument('--positions', '-p', action='store_true',
-                        help='Print the positions of detected faces to the console'
-                        ' (format: Top, Right, Bottom, Left)')
-    parser.add_argument('--show', '-s', action='store_true',
-                        help='Show the result image after processing')
     args = parser.parse_args()
 
     if not os.path.isfile(args.image_path):
@@ -55,14 +50,12 @@ def main():
     print(f"Image saved as '{args.output}' with {len(face_locations)} face(s) highlighted")
 
     # Print results
-    if args.positions:
-        print(f"Found {len(face_locations)} face(s) in the image: {args.image_path}")
-        for i, (top, right, bottom, left) in enumerate(face_locations, 1):
-            print(f"Face {i}: Top={top}, Right={right}, Bottom={bottom}, Left={left}")
+    print(f"Found {len(face_locations)} face(s) in the image: {args.image_path}")
+    for i, (top, right, bottom, left) in enumerate(face_locations, 1):
+        print(f"Face {i}: Top={top}, Right={right}, Bottom={bottom}, Left={left}")
 
     # Display the image on the screen if requested
-    if args.show:
-        image.show()
+    image.show()
 
 
 if __name__ == '__main__':
